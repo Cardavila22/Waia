@@ -1,0 +1,360 @@
+/* ==========================================================
+   WAIA
+   RESET CSS
+   Normalización global
+========================================================== */
+
+
+/* ==========================
+   BOX MODEL
+========================== */
+
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+/* ==========================
+   HTML
+========================== */
+
+
+html{
+
+    scroll-behavior:smooth;
+
+    font-size:16px;
+
+    scroll-padding-top:90px;
+
+}
+
+
+
+/* ==========================
+   BODY
+========================== */
+
+
+body{
+
+    min-width:320px;
+
+    min-height:100vh;
+
+
+    font-family:
+    var(--font-family);
+
+
+    font-size:
+    var(--font-md);
+
+
+    font-weight:
+    var(--fw-normal);
+
+
+    line-height:1.6;
+
+
+    background:
+    var(--background);
+
+
+    color:
+    var(--gray-800);
+
+
+    text-rendering:
+    optimizeLegibility;
+
+
+    -webkit-font-smoothing:
+    antialiased;
+
+
+    -moz-osx-font-smoothing:
+    grayscale;
+
+
+}
+
+
+
+/* ==========================
+   ROOT
+========================== */
+
+
+#root{
+
+    min-height:100vh;
+
+}
+
+
+
+/* ==========================
+   MEDIA
+========================== */
+
+
+img,
+picture,
+video,
+canvas{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+
+/* ==========================
+   SVG
+========================== */
+
+
+svg{
+
+    display:inline-block;
+
+    vertical-align:middle;
+
+}
+
+
+
+/* ==========================
+   LISTAS
+========================== */
+
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+
+
+/* ==========================
+   LINKS
+========================== */
+
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:
+    var(--transition-fast);
+
+}
+
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+}
+
+
+
+/*
+  No eliminamos estilos internos
+  para proteger Material UI
+*/
+
+
+
+/* ==========================
+   FORMS
+========================== */
+
+
+input,
+textarea,
+select{
+
+    font-family:inherit;
+
+}
+
+
+
+/* ==========================
+   TEXTAREA
+========================== */
+
+
+textarea{
+
+    resize:vertical;
+
+}
+
+
+
+/* ==========================
+   PLACEHOLDER
+========================== */
+
+
+::placeholder{
+
+    color:
+    var(--gray-400);
+
+}
+
+
+
+/* ==========================
+   FOCUS ACCESSIBILITY
+========================== */
+
+
+:focus-visible{
+
+    outline:
+
+    3px solid
+    var(--color-accent);
+
+
+    outline-offset:
+    3px;
+
+}
+
+
+
+/* ==========================
+   TABLES
+========================== */
+
+
+table{
+
+    border-collapse:collapse;
+
+}
+
+
+
+/* ==========================
+   IFRAMES
+========================== */
+
+
+iframe{
+
+    border:0;
+
+}
+
+
+
+/* ==========================
+   TEXT SELECTION
+========================== */
+
+
+::selection{
+
+    background:
+    var(--color-primary);
+
+
+    color:
+    var(--white);
+
+}
+
+
+
+/* ==========================
+   SCROLLBAR PREMIUM
+========================== */
+
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:
+    var(--gray-100);
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:
+    var(--color-primary);
+
+
+    border-radius:
+    999px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:
+    var(--color-primary-dark);
+
+}
+
+
+
+/* Firefox */
+
+
+html{
+
+    scrollbar-width:
+    thin;
+
+
+    scrollbar-color:
+
+    var(--color-primary)
+
+    var(--gray-100);
+
+}

@@ -1,0 +1,7 @@
+import { Link } from "react-router-dom";
+import { Button, Chip } from "@mui/material";
+import "./Bookings.css";
+export default function Bookings({ bookings = [], onCancel }) {
+  const list = Array.isArray(bookings) ? bookings : [];
+  return <div className="section"><div className="container-custom"><div className="bookings-head"><div><span className="pill">Mis reservas</span><h1>Tu próxima aventura</h1><p>Las reservas de esta demo se guardan en tu navegador y no realizan pagos reales.</p></div><Link to="/experiencias" className="waia-btn-primary">Buscar experiencias</Link></div>{list.length===0?<div className="bookings-empty"><strong>No tienes reservas todavía.</strong><p>Explora una experiencia y completa el formulario.</p><Link to="/explorar">Explorar ahora</Link></div>:<div className="booking-list">{list.map((b)=><article className="booking-card" key={b.id}><div><div className="booking-card__top"><span className="pill">{b.category||"Experiencia"}</span><Chip size="small" color={b.status==='cancelled'?'default':'success'} label={b.status==='cancelled'?'Cancelada':'Confirmada'}/></div><h3>{b.experienceTitle||"Reserva WAIA"}</h3><p>{b.location}</p><div className="booking-card__meta"><span>📅 {b.date}</span><span>👥 {b.guests||1} personas</span><span>US${Number(b.price||0).toFixed(2)}</span></div><small>{b.id}</small></div>{b.status!=='cancelled'&&<Button color="error" onClick={()=>onCancel?.(b.id)}>Cancelar</Button>}</article>)}</div>}</div></div>;
+}

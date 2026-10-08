@@ -1,0 +1,1 @@
+<?php // Modelo de Community.

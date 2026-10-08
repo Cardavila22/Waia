@@ -1,0 +1,1233 @@
+/* ==========================================================
+   WAIA
+   FILTER BAR PREMIUM v2
+========================================================== */
+
+
+.filter-bar {
+
+    padding:5rem 0 3rem;
+
+    background:#FFFFFF;
+
+}
+
+
+
+
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+
+.filter-header {
+
+    text-align:center;
+
+    margin-bottom:3rem;
+
+}
+
+
+
+.filter-subtitle {
+
+
+    display:inline-flex;
+
+    align-items:center;
+
+
+    padding:.5rem 1.2rem;
+
+
+    margin-bottom:1rem;
+
+
+
+    background:
+
+    rgba(213,15,53,.08);
+
+
+
+    color:#D50F35;
+
+
+
+    border-radius:999px;
+
+
+
+    font-size:.9rem;
+
+
+
+    font-weight:800;
+
+
+
+    letter-spacing:.5px;
+
+
+}
+
+
+
+
+
+.filter-header .section-title {
+
+
+    color:#212121;
+
+
+    font-size:
+
+    clamp(2rem,4vw,3rem);
+
+
+
+    font-weight:900;
+
+
+
+    margin-bottom:1rem;
+
+
+}
+
+
+
+
+
+.filter-header .section-subtitle {
+
+
+    max-width:760px;
+
+
+
+    margin:auto;
+
+
+
+    color:#666;
+
+
+
+    line-height:1.8;
+
+
+
+    font-size:1.05rem;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   CONTENEDOR BOTONES
+========================================================== */
+
+
+.filter-buttons {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    flex-wrap:wrap;
+
+
+
+    gap:1.2rem;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   BOTONES CATEGORÍA WAIA
+========================================================== */
+
+
+.filter-btn {
+
+
+    position:relative;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    gap:.7rem;
+
+
+
+    padding:
+
+    .9rem 1.6rem;
+
+
+
+    border-radius:50px;
+
+
+
+    border:
+
+    1px solid rgba(33,33,33,.12);
+
+
+
+    background:
+
+    rgba(255,255,255,.95);
+
+
+
+    color:#212121;
+
+
+
+    font-size:.95rem;
+
+
+
+    font-weight:700;
+
+
+
+    cursor:pointer;
+
+
+
+    overflow:hidden;
+
+
+
+    transition:
+
+    all .35s ease;
+
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.06);
+
+
+}
+
+
+
+
+
+.filter-btn::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+
+    inset:0;
+
+
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(213,15,53,.15),
+
+    transparent
+
+    );
+
+
+
+    transform:
+
+    translateX(-100%);
+
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+
+.filter-btn:hover::before {
+
+
+    transform:
+
+    translateX(100%);
+
+
+}
+
+
+
+
+
+.filter-btn svg {
+
+
+    color:#D50F35;
+
+
+
+    font-size:1.3rem;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+
+.filter-btn:hover {
+
+
+    transform:
+
+    translateY(-5px);
+
+
+
+    border-color:#D50F35;
+
+
+
+    color:#D50F35;
+
+
+
+    box-shadow:
+
+    0 18px 35px rgba(213,15,53,.18);
+
+
+}
+
+
+
+
+.filter-btn:hover svg {
+
+
+    transform:
+
+    scale(1.15)
+    rotate(-8deg);
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   ACTIVO
+========================================================== */
+
+
+.filter-btn.active {
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #D50F35,
+
+    #ff4065
+
+    );
+
+
+
+    color:#FFFFFF;
+
+
+
+    border-color:transparent;
+
+
+
+    box-shadow:
+
+    0 18px 40px rgba(213,15,53,.35);
+
+
+}
+
+
+
+
+
+.filter-btn.active svg {
+
+
+    color:#FFFFFF;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   MODAL CATEGORÍA WAIA
+========================================================== */
+
+
+.category-modal-overlay {
+
+
+    position:fixed;
+
+
+
+    inset:0;
+
+
+
+    z-index:9999;
+
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+    padding:20px;
+
+
+
+    background:
+
+    rgba(33,33,33,.78);
+
+
+
+    backdrop-filter:
+
+    blur(12px);
+
+
+
+    animation:
+
+    fadeModal .35s ease;
+
+
+}
+
+
+
+
+
+
+
+
+.category-modal {
+
+
+    position:relative;
+
+
+
+    width:
+
+    min(520px,100%);
+
+
+
+    padding:2rem;
+
+
+
+    background:#FFFFFF;
+
+
+
+    border-radius:28px;
+
+
+
+    text-align:center;
+
+
+
+    box-shadow:
+
+    0 40px 90px rgba(0,0,0,.35);
+
+
+
+    animation:
+
+    modalUp .45s ease;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   CERRAR MODAL
+========================================================== */
+
+
+.category-close {
+
+
+    position:absolute;
+
+
+
+    top:18px;
+
+
+
+    right:18px;
+
+
+
+    width:42px;
+
+
+
+    height:42px;
+
+
+
+    border:none;
+
+
+
+    border-radius:50%;
+
+
+
+    background:#FFFFFF;
+
+
+
+    color:#212121;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.35s;
+
+
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+
+.category-close:hover {
+
+
+    background:#D50F35;
+
+
+
+    color:#FFFFFF;
+
+
+
+    transform:
+
+    rotate(90deg);
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   ICONO CATEGORÍA
+========================================================== */
+
+
+.category-modal-icon {
+
+
+    width:90px;
+
+
+
+    height:90px;
+
+
+
+    margin:
+
+    .5rem auto 1.5rem;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    border-radius:50%;
+
+
+
+    background:
+
+    rgba(213,15,53,.10);
+
+
+
+    color:#D50F35;
+
+
+
+    animation:
+
+    iconPulse 2s infinite;
+
+
+}
+
+
+
+
+
+.category-modal-icon svg {
+
+
+    font-size:3.2rem;
+
+
+}
+
+
+
+
+
+
+
+@keyframes iconPulse {
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+
+
+100%{
+
+transform:scale(1);
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   CONTENIDO MODAL
+========================================================== */
+
+
+.category-modal h3 {
+
+
+    color:#212121;
+
+
+
+    font-size:
+
+    1.8rem;
+
+
+
+    font-weight:900;
+
+
+
+    margin-bottom:1rem;
+
+
+}
+
+
+
+
+
+.category-modal p {
+
+
+    color:#666;
+
+
+
+    line-height:1.8;
+
+
+
+    margin-bottom:2rem;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   BOTÓN DESCUBRIR
+========================================================== */
+
+
+.category-discover-btn {
+
+
+    width:100%;
+
+
+
+    height:55px;
+
+
+
+    border:none;
+
+
+
+    border-radius:50px;
+
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #D50F35,
+
+    #ff4065
+
+    );
+
+
+
+    color:#FFFFFF;
+
+
+
+    font-weight:800;
+
+
+
+    font-size:1rem;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    gap:.7rem;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+.category-discover-btn:hover {
+
+
+    transform:
+
+    translateY(-4px);
+
+
+
+    box-shadow:
+
+    0 18px 40px rgba(213,15,53,.35);
+
+
+}
+
+
+
+
+
+.category-discover-btn svg {
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.category-discover-btn:hover svg {
+
+
+    transform:
+
+    translateX(6px);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   ANIMACIONES
+========================================================== */
+
+
+@keyframes fadeModal {
+
+
+from{
+
+opacity:0;
+
+}
+
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+
+@keyframes modalUp {
+
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(40px)
+scale(.95);
+
+}
+
+
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+scale(1);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   RESPONSIVE TABLET
+========================================================== */
+
+
+@media(max-width:992px){
+
+
+.filter-buttons{
+
+
+gap:1rem;
+
+
+}
+
+
+
+.filter-btn{
+
+
+padding:
+
+.85rem 1.3rem;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   RESPONSIVE MOBILE
+========================================================== */
+
+
+@media(max-width:768px){
+
+
+.filter-bar{
+
+
+padding:
+
+3.5rem 0 2rem;
+
+
+}
+
+
+
+.filter-buttons{
+
+
+justify-content:flex-start;
+
+
+
+flex-wrap:nowrap;
+
+
+
+overflow-x:auto;
+
+
+
+padding-bottom:15px;
+
+
+
+scrollbar-width:none;
+
+
+}
+
+
+
+
+.filter-buttons::-webkit-scrollbar{
+
+
+display:none;
+
+
+}
+
+
+
+.filter-btn{
+
+
+flex:
+
+0 0 auto;
+
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:480px){
+
+
+.filter-subtitle{
+
+
+font-size:.8rem;
+
+
+}
+
+
+
+.filter-btn{
+
+
+padding:
+
+.75rem 1rem;
+
+
+
+font-size:.85rem;
+
+
+}
+
+
+
+.category-modal{
+
+
+padding:
+
+1.5rem;
+
+
+}
+
+
+
+.category-modal h3{
+
+
+font-size:
+
+1.5rem;
+
+
+}
+
+
+
+.category-modal p{
+
+
+font-size:.9rem;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:320px){
+
+
+.filter-btn{
+
+
+font-size:.78rem;
+
+
+}
+
+
+
+.category-modal-icon{
+
+
+width:75px;
+
+
+height:75px;
+
+
+}
+
+
+
+.category-modal-icon svg{
+
+
+font-size:2.5rem;
+
+
+}
+
+
+}

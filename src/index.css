@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "./styles/variables.css";
+@import "./styles/reset.css";
+
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--background);color:var(--waia-black);font-family:var(--waia-font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button,input,select,textarea{font:inherit}
+button,a{ -webkit-tap-highlight-color:transparent }
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(213,15,53,.24);outline-offset:2px}
+img{max-width:100%}
+::selection{background:rgba(213,15,53,.16);color:var(--waia-black)}
+.container-custom{width:min(92%,var(--waia-container));margin-inline:auto}
+.section{padding:5.5rem 0}.section-sm{padding:3rem 0}.section-lg{padding:7rem 0}
+.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--waia-black);letter-spacing:-.04em;margin:0 0 .8rem}
+.section-subtitle{color:var(--waia-muted);font-size:1rem;line-height:1.8;max-width:720px}
+.waia-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:46px;padding:.8rem 1.25rem;border:0;border-radius:14px;background:var(--waia-primary);color:#fff;font-weight:800;box-shadow:0 10px 24px rgba(213,15,53,.18);transition:transform .2s var(--waia-ease),background .2s,box-shadow .2s}
+.waia-btn-primary:hover{background:var(--waia-primary-dark);transform:translateY(-2px);box-shadow:0 14px 30px rgba(213,15,53,.24)}
+.waia-card{background:#fff;border:1px solid var(--waia-border);border-radius:var(--waia-radius-lg);box-shadow:var(--waia-shadow-sm);overflow:hidden}
+@media(max-width:768px){.section{padding:3.8rem 0}.container-custom{width:min(92%,var(--waia-container))}}

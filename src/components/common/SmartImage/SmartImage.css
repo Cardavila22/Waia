@@ -1,0 +1,1 @@
+.smart-image{width:100%;height:100%;object-fit:cover}.smart-image--fallback{background:linear-gradient(135deg,#f0ebe9,#ddd5d1);color:#6b7280;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;min-height:100%;font-size:.8rem}.smart-image--fallback svg{font-size:2rem}

@@ -1,0 +1,5 @@
+import { Link } from "react-router-dom";
+import { departmentsData } from "../../data/nicaraguaTerritory";
+import SmartImage from "../../components/common/SmartImage/SmartImage";
+import "./Departments.css";
+export default function Departments(){return <div><section className="departments-hero"><div className="container-custom"><span className="pill">Territorio nacional</span><h1>Explora Nicaragua</h1><p>15 departamentos y 2 regiones autónomas como base del catálogo turístico de WAIA.</p></div></section><section className="section"><div className="container-custom"><div className="departments-grid">{departmentsData.map(dep=><Link className="department-card" key={dep.slug} to={`/departamentos/${dep.slug}`}><div className="department-card__image"><SmartImage src={dep.imageUrl} alt={dep.name}/></div><div><span>{dep.type==='region-autonoma'?'Región autónoma':'Departamento'}</span><h3>{dep.name}</h3><p>{dep.description}</p><strong>{dep.municipalities.length} municipios · Explorar →</strong></div></Link>)}</div></div></section></div>}

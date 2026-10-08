@@ -1,0 +1,7 @@
+import { Link } from "react-router-dom";
+import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
+import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
+import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
+import SmartImage from "../common/SmartImage/SmartImage";
+import "./PlaceCard.css";
+export default function PlaceCard({place,favorite=false,onToggleFavorite}){return <article className="place-card"><div className="place-card__media"><SmartImage src={place.imageUrl} alt={place.name}/><div className="place-card__badge">{place.categoryLabel}</div><button className={`place-card__fav ${favorite?'is-active':''}`} aria-label={favorite?'Quitar de favoritos':'Guardar en favoritos'} onClick={()=>onToggleFavorite?.(place.id,'place')}>{favorite?<FavoriteRoundedIcon/>:<FavoriteBorderRoundedIcon/>}</button></div><div className="place-card__body"><span className="place-card__location">{place.municipality}, {place.department}</span><h3>{place.name}</h3><p>{place.description}</p><div className="place-card__meta"><span>{place.rating?`★ ${place.rating}`:'Sin rating'}</span><span>{place.priceLabel||'Consultar'}</span></div><div className="place-card__footer">{place.isDemo&&<small>Información de demostración</small>}<Link to={`/destino/${place.id}`}>Ver detalles <ArrowOutwardRoundedIcon fontSize="small"/></Link></div></div></article>}
